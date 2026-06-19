@@ -152,9 +152,18 @@ npm run dev
 
 跨语言混合：选中文，编辑中英文混排"Hello 你好 World 世界" → 验证 PDF 中英文字体自动切换。
 
+## 许可证
+
+本项目整体以 **GNU Affero General Public License v3** 发布（见仓库根 `LICENSE`），主要原因是依赖 iText 7 / pdfHTML（`com.itextpdf:itext7-core` / `html2pdf` / `font-asian`），它们都是 AGPL v3 + 商用付费的双许可。
+
+含义：
+- 你可以**免费**使用、修改、分发本项目（含商用部署），前提是同样按 AGPL v3 发布你的衍生作品源码、并向网络用户提供源码。
+- 如果你想把 PDF 生成能力集成到**闭源商业产品**对外提供服务，需向 iText Group NV 购买商用 license，或迁移到 OpenPDF（LGPL / MPL，HTML 支持弱很多）。
+- 仓库内嵌的 Noto 字体遵循 [SIL OFL 1.1](https://scripts.sil.org/OFL)，与代码许可证独立，可自由用于商用。
+
 ## 已知限制
 
-- **iText 7 AGPL**：仅限内部预研。如要对外提供 PDF 生成服务，需购买商用授权或迁移到 OpenPDF（LGPL/MPL，HTML 支持弱一些）。
+- **iText 7 AGPL**：见上"许可证"小节。
 - **JAR 体积**：因 CJK 字体大，jar 包约 116 MB。生产环境建议用 fonttools 对 CJK 字体做按字形 subsetting。
 - **未做**：用户登录鉴权、富文本图片上传到 OSS、列表分页、表单国际化（错误提示默认中文）。
 - **测试数据**：数据库密码通过 `DB_PASSWORD` 环境变量注入，**不要**写进 `application.yml`（避免误推到 git）。
