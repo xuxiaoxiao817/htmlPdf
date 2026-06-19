@@ -87,7 +87,7 @@ SpringProject/
 "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysql.exe" -u root -p < backend/src/main/resources/db/init.sql
 ```
 
-修改 `backend/src/main/resources/application.yml` 中的 `spring.datasource.password`。
+数据库密码**不**写进 `application.yml`，而是通过 `DB_PASSWORD` 环境变量注入（见下）。`.env.example` 是模板。
 
 ### 2. 下载字体（首次运行）
 
@@ -99,7 +99,16 @@ node scripts/download-fonts.js
 
 ### 3. 启动后端
 
+设置 `DB_PASSWORD` 后再启动（**必须**，否则 `application.yml` 的 `${DB_PASSWORD:SET_DB_PASSWORD_ENV_VAR}` 占位符会让应用启动失败）：
+
 ```bash
+# bash / git-bash
+export DB_PASSWORD=your_mysql_password
+cd backend
+mvn spring-boot:run
+
+# PowerShell
+$env:DB_PASSWORD="your_mysql_password"
 cd backend
 mvn spring-boot:run
 ```
@@ -108,7 +117,7 @@ mvn spring-boot:run
 
 ```bash
 mvn -DskipTests package
-java -jar target/agreement-0.0.1-SNAPSHOT.jar
+DB_PASSWORD=your_mysql_password java -jar target/agreement-0.0.1-SNAPSHOT.jar
 ```
 
 后端监听 `http://localhost:8090`（避开 GeneaCloud 等占用 8080 端口的项目）。
@@ -148,7 +157,7 @@ npm run dev
 - **iText 7 AGPL**：仅限内部预研。如要对外提供 PDF 生成服务，需购买商用授权或迁移到 OpenPDF（LGPL/MPL，HTML 支持弱一些）。
 - **JAR 体积**：因 CJK 字体大，jar 包约 116 MB。生产环境建议用 fonttools 对 CJK 字体做按字形 subsetting。
 - **未做**：用户登录鉴权、富文本图片上传到 OSS、列表分页、表单国际化（错误提示默认中文）。
-- **测试数据**：当前 `application.yml` 的 MySQL 密码是占位符，请按需修改。
+- **测试数据**：数据库密码通过 `DB_PASSWORD` 环境变量注入，**不要**写进 `application.yml`（避免误推到 git）。
 
 ## 排错速查
 

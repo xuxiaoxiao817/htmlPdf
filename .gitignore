@@ -19,3 +19,6 @@ Thumbs.db
 # env
 .env
 .env.local
+*.local.yml
+backend/src/main/resources/application-local.yml
+backend/src/main/resources/application-prod.yml
