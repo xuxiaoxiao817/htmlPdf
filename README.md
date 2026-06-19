@@ -161,6 +161,15 @@ npm run dev
 - 如果你想把 PDF 生成能力集成到**闭源商业产品**对外提供服务，需向 iText Group NV 购买商用 license，或迁移到 OpenPDF（LGPL / MPL，HTML 支持弱很多）。
 - 仓库内嵌的 Noto 字体遵循 [SIL OFL 1.1](https://scripts.sil.org/OFL)，与代码许可证独立，可自由用于商用。
 
+## 分支
+
+| 分支 | 用途 | iText / html2pdf | PdfService 语法 |
+|---|---|---|---|
+| `main` | 主开发，JDK 17+，现代 iText | 8.0.5 / 5.0.5 | JDK 15+（text block / `.formatted()`） |
+| `pdf-jdk8-compat` | **JDK 8 移植版**——`PdfService.java` 用了 JDK 8 语法（字符串拼接 + `String.format`），可直接拷到 JDK 8 / iText 7.1.18 的项目里（如公司内网） | 7.1.18 / 4.0.5 | JDK 8 |
+
+如果你的目标是部署到 JDK 8 环境：切到 `pdf-jdk8-compat` 分支，把 `backend/src/main/java/com/example/agreement/service/PdfService.java` 和 `backend/src/main/resources/fonts/`（含 `noto.css` + 14 个字体文件）拷到你公司项目的对应位置，再加 7.1.18 / 4.0.5 的 iText 依赖即可。**注意**：你公司那个 JDK 8 项目的整体许可证仍受 iText AGPL 约束。
+
 ## 已知限制
 
 - **iText 7 AGPL**：见上"许可证"小节。

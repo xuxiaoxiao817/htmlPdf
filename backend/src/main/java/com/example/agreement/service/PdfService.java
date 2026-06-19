@@ -23,19 +23,20 @@ import java.time.format.DateTimeFormatter;
 public class PdfService {
 
     private static final String CSS_RESOURCE = "fonts/noto.css";
-    private static final String HTML_TEMPLATE = """
-            <!DOCTYPE html>
-            <html lang="%s">
-            <head>
-              <meta charset="UTF-8"/>
-              <title>Agreement</title>
-              <style>%s</style>
-            </head>
-            <body>
-              <div class="content">%s</div>
-            </body>
-            </html>
-            """;
+    // JDK 8 compatible: text block + String.formatted() replaced with concatenation + String.format()
+    // so this file can be copied verbatim into JDK 8 / iText 7.1.18 projects.
+    private static final String HTML_TEMPLATE =
+            "<!DOCTYPE html>\n" +
+            "<html lang=\"%s\">\n" +
+            "<head>\n" +
+            "  <meta charset=\"UTF-8\"/>\n" +
+            "  <title>Agreement</title>\n" +
+            "  <style>%s</style>\n" +
+            "</head>\n" +
+            "<body>\n" +
+            "  <div class=\"content\">%s</div>\n" +
+            "</body>\n" +
+            "</html>\n";
 
     public byte[] renderPdf(String htmlContent, String language, String title) {
         if (htmlContent == null) {
@@ -44,7 +45,7 @@ public class PdfService {
 
         String css = readClasspathFile(CSS_RESOURCE);
         String safeTitle = (title == null || title.isBlank()) ? "Agreement" : escapeXml(title);
-        String fullHtml = HTML_TEMPLATE.formatted(
+        String fullHtml = String.format(HTML_TEMPLATE,
                 language == null ? "en" : language,
                 css,
                 htmlContent
@@ -93,7 +94,7 @@ public class PdfService {
 
     public String suggestedFileName(Long id, String language) {
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        return "agreement_%d_%s_%s.pdf".formatted(id, language == null ? "und" : language, date);
+        return String.format("agreement_%d_%s_%s.pdf", id, language == null ? "und" : language, date);
     }
 
     public String contentType() {

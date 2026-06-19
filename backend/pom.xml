@@ -20,8 +20,13 @@
 
     <properties>
         <java.version>17</java.version>
-        <itext.version>8.0.5</itext.version>
-        <pdfhtml.version>5.0.5</pdfhtml.version>
+        <!-- iText 7.1.x branch — last line that supports JDK 8.
+             For JDK 17+ dev: this branch's PdfService.java is written in
+             JDK 8 syntax so it can be copied into JDK 8 / iText 7.1.18 projects
+             (e.g. company intranet). To revert to iText 7.2+ / html2pdf 5.x,
+             switch itext.version to 8.0.5 and pdfhtml.version to 5.0.5. -->
+        <itext.version>7.1.18</itext.version>
+        <pdfhtml.version>4.0.5</pdfhtml.version>
         <lombok.version>1.18.38</lombok.version>
     </properties>
 
