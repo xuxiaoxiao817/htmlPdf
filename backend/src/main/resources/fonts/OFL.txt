@@ -1,0 +1,6 @@
+Noto Sans, Noto Sans Thai, Noto Sans CJK
+Copyright 2014-2024 Adobe Inc. (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Copyright 2014-2024 Google LLC.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+Full text: https://scripts.sil.org/OFL

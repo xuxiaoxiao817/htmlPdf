@@ -1,0 +1,200 @@
+/* Noto Sans family, registered with a single font-family name 'AppFont'.
+   pdfHTML uses unicode-range to pick the correct font per code point,
+   so a document mixing Latin, Cyrillic, Thai, CJK will render without tofu.
+
+   Bundled files (all under fonts/):
+     NotoSans-{Regular,Bold,Italic,BoldItalic}.ttf         — Latin / Cyrillic / Vietnamese / Czech
+     NotoSansThai-{Regular,Bold}.ttf                        — Thai
+     NotoSansCJKsc-Regular.otf                              — Chinese (Simplified) — also covers most CJK Unified, Hiragana, Katakana, Hangul
+     NotoSansCJKtc-Regular.otf                              — Chinese (Traditional) — covers traditional-only ideographs
+     NotoSansCJKjp-Regular.otf                              — Japanese — covers Hiragana/Katakana + JP-only kanji variants
+     NotoSansCJKkr-Regular.otf                              — Korean — covers Hangul + KR Hanja */
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSans-Regular.ttf') format('truetype');
+  unicode-range:
+    U+0000-007F,        /* Basic Latin */
+    U+0080-00FF,        /* Latin-1 Supplement */
+    U+0100-017F,        /* Latin Extended-A (Czech, Vietnamese diacritics) */
+    U+0180-024F,        /* Latin Extended-B */
+    U+0250-02AF,        /* IPA Extensions */
+    U+02B0-02FF,        /* Spacing Modifier Letters */
+    U+0300-036F,        /* Combining Diacritical Marks */
+    U+0370-03FF,        /* Greek and Coptic */
+    U+0400-04FF,        /* Cyrillic (Bulgarian, Russian) */
+    U+0500-052F,        /* Cyrillic Supplement */
+    U+1E00-1EFF,        /* Latin Extended Additional */
+    U+2000-206F,        /* General Punctuation */
+    U+2070-209F,        /* Superscripts and Subscripts */
+    U+20A0-20CF,        /* Currency Symbols */
+    U+2100-214F,        /* Letterlike Symbols */
+    U+2150-218F,        /* Number Forms */
+    U+2190-21FF,        /* Arrows */
+    U+2200-22FF,        /* Mathematical Operators */
+    U+2300-23FF,        /* Miscellaneous Technical */
+    U+2500-257F,        /* Box Drawing */
+    U+2580-259F,        /* Block Elements */
+    U+25A0-25FF,        /* Geometric Shapes */
+    U+2600-26FF,        /* Miscellaneous Symbols */
+    U+2700-27BF,        /* Dingbats */
+    U+2DE0-2DFF,        /* Cyrillic Extended-A */
+    U+A640-A69F,        /* Cyrillic Extended-B */
+    U+FB00-FB06;        /* Alphabetic Presentation Forms */
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  src: url('fonts/NotoSans-Bold.ttf') format('truetype');
+  unicode-range:
+    U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F, U+0250-02AF,
+    U+02B0-02FF, U+0300-036F, U+0370-03FF, U+0400-04FF, U+0500-052F,
+    U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF, U+2100-214F,
+    U+2150-218F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+2500-257F,
+    U+2580-259F, U+25A0-25FF, U+2600-26FF, U+2700-27BF, U+2DE0-2DFF, U+A640-A69F;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-style: italic;
+  src: url('fonts/NotoSans-Italic.ttf') format('truetype');
+  unicode-range:
+    U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F, U+0250-02AF,
+    U+02B0-02FF, U+0300-036F, U+0370-03FF, U+0400-04FF, U+0500-052F,
+    U+1E00-1EFF, U+2000-206F;
+}
+
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  font-style: italic;
+  src: url('fonts/NotoSans-BoldItalic.ttf') format('truetype');
+  unicode-range:
+    U+0000-007F, U+0080-00FF, U+0100-017F, U+0180-024F, U+0400-04FF, U+1E00-1EFF;
+}
+
+/* Thai */
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansThai-Regular.ttf') format('truetype');
+  unicode-range: U+0E00-0E7F;
+}
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  src: url('fonts/NotoSansThai-Bold.ttf') format('truetype');
+  unicode-range: U+0E00-0E7F;
+}
+
+/* Arabic — covers Arabic, Persian/Farsi, Urdu, Pashto, Sindhi, etc. */
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansArabic-Regular.ttf') format('truetype');
+  unicode-range:
+    U+0600-06FF,        /* Arabic */
+    U+0750-077F,        /* Arabic Supplement */
+    U+08A0-08FF,        /* Arabic Extended-A */
+    U+FB50-FDFF,        /* Arabic Presentation Forms-A */
+    U+FE70-FEFF;        /* Arabic Presentation Forms-B */
+}
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  src: url('fonts/NotoSansArabic-Bold.ttf') format('truetype');
+  unicode-range:
+    U+0600-06FF,
+    U+0750-077F,
+    U+08A0-08FF,
+    U+FB50-FDFF,
+    U+FE70-FEFF;
+}
+
+/* CJK — split by region.
+   SC handles the bulk of U+4E00-9FFF (most common shared ideographs).
+   JP handles Hiragana/Katakana.
+   KR handles Hangul Syllables.
+   TC handles CJK Compatibility Ideographs and traditional-only extensions. */
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansCJKjp-Regular.otf') format('opentype');
+  unicode-range:
+    U+3040-309F,        /* Hiragana */
+    U+30A0-30FF,        /* Katakana */
+    U+31F0-31FF,        /* Katakana Phonetic Extensions */
+    U+FF00-FFEF;        /* Halfwidth and Fullwidth Forms (mostly JP punctuation/digits) */
+}
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+  unicode-range:
+    U+AC00-D7AF,        /* Hangul Syllables */
+    U+1100-11FF,        /* Hangul Jamo */
+    U+3130-318F,        /* Hangul Compatibility Jamo */
+    U+A960-A97F,        /* Hangul Jamo Extended-A */
+    U+D7B0-D7FF;        /* Hangul Jamo Extended-B */
+}
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansCJKtc-Regular.otf') format('opentype');
+  unicode-range:
+    U+2F00-2FD5,        /* Kangxi Radicals */
+    U+2E80-2EFF,        /* CJK Radicals Supplement */
+    U+3400-4DBF,        /* CJK Unified Ideographs Extension A (TC-rich) */
+    U+F900-FAFF,        /* CJK Compatibility Ideographs */
+    U+2F800-2FA1F;      /* CJK Compatibility Ideographs Supplement */
+}
+
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansCJKsc-Regular.otf') format('opentype');
+  unicode-range:
+    U+3000-303F,        /* CJK Symbols and Punctuation */
+    U+3200-32FF,        /* Enclosed CJK Letters and Months */
+    U+3300-33FF,        /* CJK Compatibility */
+    U+4E00-9FFF,        /* CJK Unified Ideographs (the main block, shared across all regions) */
+    U+20000-2A6DF,      /* CJK Unified Ideographs Extension B */
+    U+2A700-2B73F,      /* CJK Unified Ideographs Extension C */
+    U+2B740-2B81F,      /* CJK Unified Ideographs Extension D */
+    U+2B820-2CEAF;      /* CJK Unified Ideographs Extension E */
+}
+
+body {
+  font-family: 'AppFont', sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.content h1, .content h2, .content h3 {
+  font-weight: bold;
+  margin: 0.6em 0 0.3em;
+}
+.content h1 { font-size: 18pt; }
+.content h2 { font-size: 15pt; }
+.content h3 { font-size: 13pt; }
+
+.content p { margin: 0 0 0.8em; }
+.content strong { font-weight: bold; }
+.content em, .content i { font-style: italic; }
+.content u { text-decoration: underline; }
+
+.content ul, .content ol { margin: 0 0 0.8em 1.5em; padding: 0; }
+.content li { margin: 0.2em 0; }
+.content a { color: #06c; text-decoration: underline; }
+
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5em 0;
+}
+.content th, .content td {
+  border: 1px solid #888;
+  padding: 4px 6px;
+}
+.content th { background: #eee; font-weight: bold; }
