@@ -69,6 +69,8 @@ public class PdfService {
         registerFontSafely(fontProvider, "fonts/NotoSans-BoldItalic.ttf");
         registerFontSafely(fontProvider, "fonts/NotoSansThai-Regular.ttf");
         registerFontSafely(fontProvider, "fonts/NotoSansThai-Bold.ttf");
+        registerFontSafely(fontProvider, "fonts/NotoSansHebrew-Regular.ttf");
+        registerFontSafely(fontProvider, "fonts/NotoSansHebrew-Bold.ttf");
         registerFontSafely(fontProvider, "fonts/NotoSansArabic-Regular.ttf");
         registerFontSafely(fontProvider, "fonts/NotoSansArabic-Bold.ttf");
         registerFontSafely(fontProvider, "fonts/NotoSansCJKsc-Regular.otf");

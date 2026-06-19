@@ -87,6 +87,23 @@
   unicode-range: U+0E00-0E7F;
 }
 
+/* Hebrew */
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansHebrew-Regular.ttf') format('truetype');
+  unicode-range:
+    U+0590-05FF,        /* Hebrew */
+    U+FB1D-FB4F;        /* Hebrew Presentation Forms */
+}
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  src: url('fonts/NotoSansHebrew-Bold.ttf') format('truetype');
+  unicode-range:
+    U+0590-05FF,
+    U+FB1D-FB4F;
+}
+
 /* Arabic — covers Arabic, Persian/Farsi, Urdu, Pashto, Sindhi, etc. */
 @font-face {
   font-family: 'AppFont';

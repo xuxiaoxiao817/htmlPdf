@@ -54,6 +54,12 @@ const FONTS = [
   ['NotoSansCJKkr-Regular.otf',
     'https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/Sans/OTF/Korean/NotoSansCJKkr-Regular.otf'],
 
+  // Hebrew
+  ['NotoSansHebrew-Regular.ttf',
+    'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansHebrew/hinted/ttf/NotoSansHebrew-Regular.ttf'],
+  ['NotoSansHebrew-Bold.ttf',
+    'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansHebrew/hinted/ttf/NotoSansHebrew-Bold.ttf'],
+
   // Arabic
   ['NotoSansArabic-Regular.ttf',
     'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansArabic/hinted/ttf/NotoSansArabic-Regular.ttf'],

@@ -27,5 +27,19 @@
   { "code": "bg",    "name": "Bulgarian",            "nativeName": "Български" },
   { "code": "ar",    "name": "Arabic",               "nativeName": "العربية" },
   { "code": "he",    "name": "Hebrew",               "nativeName": "עברית" },
-  { "code": "fa",    "name": "Persian",              "nativeName": "فارسی" }
+  { "code": "fa",    "name": "Persian",              "nativeName": "فارسی" },
+  { "code": "id",    "name": "Indonesian",           "nativeName": "Bahasa Indonesia" },
+  { "code": "ms",    "name": "Malay",                "nativeName": "Bahasa Melayu" },
+  { "code": "tl",    "name": "Tagalog",              "nativeName": "Tagalog" },
+  { "code": "ca",    "name": "Catalan",              "nativeName": "Català" },
+  { "code": "sk",    "name": "Slovak",               "nativeName": "Slovenčina" },
+  { "code": "sl",    "name": "Slovenian",            "nativeName": "Slovenščina" },
+  { "code": "hr",    "name": "Croatian",             "nativeName": "Hrvatski" },
+  { "code": "sr",    "name": "Serbian",              "nativeName": "Srpski" },
+  { "code": "lt",    "name": "Lithuanian",           "nativeName": "Lietuvių" },
+  { "code": "lv",    "name": "Latvian",              "nativeName": "Latviešu" },
+  { "code": "et",    "name": "Estonian",             "nativeName": "Eesti" },
+  { "code": "is",    "name": "Icelandic",            "nativeName": "Íslenska" },
+  { "code": "be",    "name": "Belarusian",           "nativeName": "Беларуская" },
+  { "code": "kk",    "name": "Kazakh",               "nativeName": "Қазақша" }
 ]
