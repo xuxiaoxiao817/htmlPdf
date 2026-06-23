@@ -41,5 +41,6 @@
   { "code": "et",    "name": "Estonian",             "nativeName": "Eesti" },
   { "code": "is",    "name": "Icelandic",            "nativeName": "Íslenska" },
   { "code": "be",    "name": "Belarusian",           "nativeName": "Беларуская" },
-  { "code": "kk",    "name": "Kazakh",               "nativeName": "Қазақша" }
+  { "code": "kk",    "name": "Kazakh",               "nativeName": "Қазақша" },
+  { "code": "my-MM", "name": "Burmese (Myanmar)",    "nativeName": "မြန်မာ" }
 ]

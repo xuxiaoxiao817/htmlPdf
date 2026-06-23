@@ -65,6 +65,12 @@ const FONTS = [
     'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansArabic/hinted/ttf/NotoSansArabic-Regular.ttf'],
   ['NotoSansArabic-Bold.ttf',
     'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansArabic/hinted/ttf/NotoSansArabic-Bold.ttf'],
+
+  // Myanmar (Burmese)
+  ['NotoSansMyanmar-Regular.ttf',
+    'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansMyanmar/hinted/ttf/NotoSansMyanmar-Regular.ttf'],
+  ['NotoSansMyanmar-Bold.ttf',
+    'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io@main/fonts/NotoSansMyanmar/hinted/ttf/NotoSansMyanmar-Bold.ttf'],
 ];
 
 function ensureDir(dir) {

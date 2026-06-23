@@ -104,6 +104,26 @@
     U+FB1D-FB4F;
 }
 
+/* Myanmar (Burmese) — uses OpenType shaping (e.g. for medials, vowels
+   like ေ / ိ / ီ / ု that shift around the consonant cluster) */
+@font-face {
+  font-family: 'AppFont';
+  src: url('fonts/NotoSansMyanmar-Regular.ttf') format('truetype');
+  unicode-range:
+    U+1000-109F,        /* Myanmar */
+    U+AA60-AA7F,        /* Myanmar Extended-A */
+    U+A9E0-A9FF;        /* Myanmar Extended-B */
+}
+@font-face {
+  font-family: 'AppFont';
+  font-weight: bold;
+  src: url('fonts/NotoSansMyanmar-Bold.ttf') format('truetype');
+  unicode-range:
+    U+1000-109F,
+    U+AA60-AA7F,
+    U+A9E0-A9FF;
+}
+
 /* Arabic — covers Arabic, Persian/Farsi, Urdu, Pashto, Sindhi, etc. */
 @font-face {
   font-family: 'AppFont';
